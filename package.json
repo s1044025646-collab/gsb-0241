@@ -1,0 +1,20 @@
+{
+  "name": "hf1-huffman-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "本地字节级 Huffman 无损压缩实验后端（HF1 容器，TypeScript + Node.js + SQLite）",
+  "type": "module",
+  "bin": {
+    "hf1": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --no-warnings --test test/unit/core.test.js test/unit/container.test.js test/unit/integration.test.js",
+    "start": "npm run build && node --no-warnings dist/server/index.js",
+    "demo": "npm run build && powershell -NoProfile -File scripts/demo.ps1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
