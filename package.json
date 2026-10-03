@@ -1,0 +1,24 @@
+{
+  "name": "huf1-lab",
+  "version": "1.0.0",
+  "description": "字节级 Huffman 无损压缩实验服务",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "start": "npm run build && node dist/src/api.js",
+    "cli": "npm run build && node dist/src/cli.js",
+    "demo": "npm run build && node dist/src/cli.js sample"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}
